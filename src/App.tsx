@@ -122,11 +122,10 @@ export default function App() {
         body: JSON.stringify(formData)
       });
 
-      if (!response.ok) {
-        throw new Error(`Cloud Server responded with status: ${response.status}`);
-      }
-
       const rawResult = await response.json();
+      if (!response.ok) {
+        throw new Error(rawResult?.error || `Cloud Server responded with status: ${response.status}`);
+      }
       if (!rawResult || !rawResult.report) {
         throw new Error("Invalid or empty audit report format from core endpoint.");
       }
@@ -247,7 +246,7 @@ export default function App() {
                 <div className="space-y-3">
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-indigo-500/20 bg-indigo-500/5 text-xs font-bold text-indigo-400 font-mono">
                     <Sparkles className="h-3.5 w-3.5" />
-                    <span>The Era of Generative AI Search</span>
+                    <span>AI Visibility Diagnostic</span>
                   </div>
                   <h2 className="text-2xl font-black font-display tracking-tight">
                     Traditional SEO is changing. Are you prepared?
@@ -296,8 +295,8 @@ export default function App() {
                 }`}>
                   <Globe className="h-5 w-5 text-indigo-500 shrink-0 mt-0.5" />
                   <div>
-                    <span className={`font-semibold block ${darkMode ? 'text-slate-300' : 'text-slate-800'}`}>Real-time Search Grounding Enabled</span>
-                    We use server-side Gemini 3 series APIs backed by active web searches. This identifies if Wikidata pages, reviews profiles, or schema signals are truly discoverable in live search caches.
+                    <span className={`font-semibold block ${darkMode ? 'text-slate-300' : 'text-slate-800'}`}>Server-side AI Diagnostic</span>
+                    The server-side AI evaluates entity, authority, content, retrieval and technical signals. Treat uncertain findings as diagnostic hypotheses and verify them with your crawler and analytics tools.
                   </div>
                 </div>
 

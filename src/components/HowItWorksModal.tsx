@@ -33,16 +33,16 @@ export default function HowItWorksModal({ isOpen, onClose, darkMode }: HowItWork
       step: "01",
       title: "Target & Entity Discovery",
       icon: Search,
-      badge: "Real-time Discovery",
-      description: "Our crawler scans your target domain, extracting core brand entities, digital profiles, Wikidata linkages, Knowledge Graph identifiers, and schema markup structures across your key digital footprint.",
+      badge: "Entity Discovery",
+      description: "The audit evaluates the supplied domain and brand context to identify the entity, profile, Knowledge Graph, and structured-data signals that should be verified.",
       details: ["Schema.org JSON-LD parsing", "Wikidata & Knowledge Panel lookup", "Official social & press entity resolution"]
     },
     {
       step: "02",
-      title: "Live LLM & Search Grounding",
+      title: "AI Signal Evaluation",
       icon: Database,
-      badge: "Gemini Grounding",
-      description: "Using Gemini and live web grounding, we evaluate discoverable signals that can influence whether answer engines understand, cite, and recommend your brand.",
+      badge: "Gemini Analysis",
+      description: "Gemini evaluates the supplied brand context against entity, content, authority, retrieval, and technical criteria that can influence answer-engine visibility.",
       details: ["Active web search cache interrogation", "Citation frequency & source verification", "Hallucination & sentiment risk analysis"]
     },
     {
@@ -195,7 +195,7 @@ export default function HowItWorksModal({ isOpen, onClose, darkMode }: HowItWork
               }`}>
                 <p className="font-semibold text-sm mb-1 flex items-center gap-1.5">
                   <Zap className="h-4 w-4 text-indigo-500" />
-                  Real-time Grounded Analysis Engine
+                  AI-Assisted Diagnostic Engine
                 </p>
                 <p className="leading-relaxed opacity-90">
                   When you initiate an audit, the backend performs a multi-stage analysis of available web signals, entity clarity, AI crawler accessibility, content structure, authority indicators and potential citation readiness.

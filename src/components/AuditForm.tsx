@@ -32,7 +32,7 @@ export default function AuditForm({ darkMode, onSubmit, isLoading, error }: Audi
   const [scanningIndex, setScanningIndex] = useState(0);
   const loadingSteps = [
     "Establishing endpoint connection with GenAI standard server...",
-    "Activating Google Search grounding parameters...",
+    "Evaluating entity and visibility signals...",
     "Running search-grounded index query for Wikidata signals...",
     "Scanning crawl bot accessibility (robots.txt, LLM crawler rules)...",
     "Parsing metadata structure & organization schemas (JSON-LD)...",
@@ -93,7 +93,7 @@ export default function AuditForm({ darkMode, onSubmit, isLoading, error }: Audi
             <div className="flex items-center space-x-2">
               <Sparkles className="h-5 w-5 text-indigo-600 dark:text-indigo-400 animate-pulse" />
               <h2 className={`font-display font-bold text-lg ${darkMode ? "text-slate-100" : "text-slate-800"}`}>
-                Initialize Real-time AI Audit
+                Initialize AI Visibility Audit
               </h2>
             </div>
             <button
