@@ -15,7 +15,7 @@ interface AuditFormProps {
 }
 
 const PRESETS = [
-  { domain: "toursbylocals.com", brandName: "ToursByLocals", competitors: "viator.com, getyourguide.com", industry: "Travel & Tours", country: "United States" },
+  { domain: "example.com", brandName: "Example Travel", competitors: "competitor-one.example, competitor-two.example", industry: "Travel & Tours", country: "United States" },
   { domain: "figma.com", brandName: "Figma", competitors: "canva.com, sketch.com", industry: "SaaS Design Tools", country: "Global" },
   { domain: "notion.so", brandName: "Notion", competitors: "asana.com, monday.com", industry: "Productivity", country: "Global" }
 ];
@@ -144,7 +144,7 @@ export default function AuditForm({ darkMode, onSubmit, isLoading, error }: Audi
                   type="text"
                   id="domain"
                   required
-                  placeholder="e.g., toursbylocals.com"
+                  placeholder="e.g., example.com"
                   className={`block w-full pl-10 pr-3 py-2.5 rounded-xl border text-sm outline-none transition-all ${
                     darkMode 
                       ? "bg-slate-800/40 border-slate-700/60 text-white focus:border-indigo-500 focus:bg-slate-800/80" 
@@ -164,7 +164,7 @@ export default function AuditForm({ darkMode, onSubmit, isLoading, error }: Audi
               <input
                 type="text"
                 id="brandName"
-                placeholder="e.g., ToursByLocals"
+                placeholder="e.g., Example Travel"
                 className={`block w-full px-3 py-2 rounded-xl border text-sm outline-none transition-all ${
                   darkMode 
                     ? "bg-slate-800/40 border-slate-700/60 text-white focus:border-indigo-500" 
