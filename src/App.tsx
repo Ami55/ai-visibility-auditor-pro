@@ -318,7 +318,7 @@ export default function App() {
       <footer className={`border-t py-6 text-center text-xs mt-12 no-print ${
         darkMode ? "border-slate-900/60 bg-slate-950/40 text-slate-500" : "border-slate-200 bg-white text-slate-400"
       }`}>
-        <p>© 2026 AI Visibility Auditor. Developed by <strong className={darkMode ? "text-slate-300" : "text-slate-700"}>Ami - SEO Girl</strong>. All rights reserved.</p>
+        <p>© 2026 AI Visibility Auditor Pro. Developed by <strong className={darkMode ? "text-slate-300" : "text-slate-700"}>SEO Girl - Ami</strong>. All rights reserved.</p>
         <p className="mt-1 font-mono text-[9px] uppercase tracking-widest text-indigo-500">
           AI visibility, entity authority and generative search readiness
         </p>
